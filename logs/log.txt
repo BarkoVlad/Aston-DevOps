@@ -1,0 +1,1 @@
+Jun 27 00:30:05 MacBook-Air-Vladislav newsyslog[3902]: logfile turned over due to size>10000K
