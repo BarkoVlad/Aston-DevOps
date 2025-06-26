@@ -11,10 +11,16 @@
     <key>RunAtLoad</key>
     <true/>
     <key>KeepAlive</key>
+    <false/>
+    <key>AbandonProcessGroup</key>
     <true/>
+    <key>ProcessType</key>
+    <string>Interactive</string>
     <key>StandardOutPath</key>
     <string>/opt/app/service.log</string>
     <key>StandardErrorPath</key>
     <string>/opt/app/service.error.log</string>
+    <key>WorkingDirectory</key>
+    <string>/opt/app</string>
 </dict>
 </plist>
