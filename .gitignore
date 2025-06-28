@@ -1,5 +1,8 @@
+# Игнорируем реальные логи
+task3/log_examples/*.log
+!task3/log_examples/example.log
+
+# Системные файлы
 .DS_Store
-venv/
-__pycache__/
+__pycache__
 *.pyc
-.env
