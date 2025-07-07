@@ -1,0 +1,27 @@
+- name: Task 5 - Setup nginx with custom index page
+  hosts: task5
+  become: yes
+  tasks:
+    - name: Update apt cache and upgrade packages
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Copy custom index.html to nginx default directory
+      copy:
+        src: index.html
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: '0644'
+
+    - name: Ensure nginx is started and enabled
+      service:
+        name: nginx
+        state: started
+        enabled: yes
